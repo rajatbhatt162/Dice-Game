@@ -34,10 +34,11 @@ const Button = styled.button`
 const RoleDice = ({ currentDice, roleDice }) => {
   return (
     <DiceContainer>
-      <DiceImage src={`${process.env.PUBLIC_URL}/images/RoleDice/Dice${currentDice}.png`} alt={`Dice ${currentDice}`} />
+      <DiceImage src={`/Dice-Game/images/RoleDice/Dice${currentDice}.png`} alt={`Dice ${currentDice}`} />
       <Button onClick={roleDice}>Roll Dice</Button>
     </DiceContainer>
   );
 };
+
 
 export default RoleDice;
