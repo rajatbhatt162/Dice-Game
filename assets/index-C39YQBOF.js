@@ -73,7 +73,7 @@ Error generating stack: `+o.message+`
       white-space: nowrap;
     }
   }
-`,Im=({toggle:e})=>R.jsxs(Lm,{children:[R.jsx("div",{children:R.jsx("img",{src:"/images/dice.png",alt:"Dice"})}),R.jsxs("div",{className:"Content",children:[R.jsx("h1",{children:"Dice-Game"}),R.jsx($m,{onClick:e,children:"Play Now"})]})]}),Om=Te.div`
+`,Im=({toggle:e})=>R.jsxs(Lm,{children:[R.jsx("div",{children:R.jsx("img",{src:"/Dice-Game\\images\\dice.png",alt:"Dice"})}),R.jsxs("div",{className:"Content",children:[R.jsx("h1",{children:"Dice-Game"}),R.jsx($m,{onClick:e,children:"Play Now"})]})]}),Om=Te.div`
   display: flex;
   flex-direction: column;
   align-items: center;
