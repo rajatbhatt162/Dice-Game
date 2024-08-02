@@ -29,6 +29,11 @@ const Button = styled.button`
     border-color: #0a0247;
     transition: 0.3s background ease-in;
   }
+  @media (max-width: 768px) {
+    width: 180px; /* Adjust width for smaller screens */
+    height: 36px; /* Adjust height for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 `;
 
 const RoleDice = ({ currentDice, roleDice }) => {

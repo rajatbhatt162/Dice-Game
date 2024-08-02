@@ -23,6 +23,11 @@ const FlexContainer = styled.div`
   gap: 24px;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column; /* Change to column on smaller screens */
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Change to row on larger screens */
+  }
 `;
 
 const Box = styled.div`
@@ -35,6 +40,22 @@ const Box = styled.div`
   font-weight: 700;
   background-color: ${(props) => (props.isSelected ? "black" : "white")};
   color: ${(props) => (!props.isSelected ? "black" : "white")};
+
+  @media (max-width: 768px) {
+    height: 50px; /* Adjust height for smaller screens */
+    width: 50px; /* Adjust width for smaller screens */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+`;
+
+const DiceImage = styled.img`
+  width: 100px;
+  height: 100px;
+
+  @media (max-width: 768px) {
+    width: 70px; /* Adjust width for smaller screens */
+    height: 70px; /* Adjust height for smaller screens */
+  }
 `;
 
 const NumberSelectorContainer = styled.div`
