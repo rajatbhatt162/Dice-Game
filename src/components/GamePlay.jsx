@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import RoleDice from "./RoleDice"; // Ensure this path is correct
 import Rules from "./Rules";
+import MainContainer from './MainContainer';
 
 const ScoreContainer = styled.div`
   max-width: 200px;
@@ -145,6 +146,7 @@ const GamePlay = () => {
 
   return (
     <>
+     <MainContainer>
       <FlexContainer>
         <ScoreContainer>
           <h1>{score}</h1>
@@ -176,6 +178,8 @@ const GamePlay = () => {
       <Button onClick={() => setShowRules(!showRules)}>Rules</Button>
       </ButtonContainer>
       {showRules && <Rules />} 
+
+      </MainContainer>
 
     </>
   );
