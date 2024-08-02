@@ -73,15 +73,15 @@ Error generating stack: `+o.message+`
       white-space: nowrap;
     }
   }
-`,Im=({toggle:e})=>R.jsxs(Lm,{children:[R.jsx("div",{children:R.jsx("img",{src:"/images/dice.png",alt:"Dice"})}),R.jsxs("div",{className:"Content",children:[R.jsx("h1",{children:"Dice-Game"}),R.jsx($m,{onClick:e,children:"Play Now"})]})]}),Om=Te.div`
+`,Im=({toggle:e})=>R.jsxs(Lm,{children:[R.jsx("div",{children:R.jsx("img",{src:"/images/dice.png",alt:"Dice"})}),R.jsxs("div",{className:"Content",children:[R.jsx("h1",{children:"Dice-Game"}),R.jsx($m,{onClick:e,children:"Play Now"})]})]});var Om={};const jm=Te.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`,jm=Te.img`
+`,Dm=Te.img`
   width: 100px;
   height: 100px;
-`,Dm=Te.button`
+`,Mm=Te.button`
   background-color: black;
   color: white;
   padding: 10px 18px;
@@ -97,7 +97,7 @@ Error generating stack: `+o.message+`
     border-color: #0a0247;
     transition: 0.3s background ease-in;
   }
-`,Mm=({currentDice:e,roleDice:t})=>R.jsxs(Om,{children:[R.jsx(jm,{src:`/images/RoleDice/Dice${e}.png`,alt:`Dice ${e}`}),R.jsx(Dm,{onClick:t,children:"Roll Dice"})]}),Fm=()=>R.jsx("div",{children:R.jsxs(Am,{children:[R.jsx("h2",{children:"How to Play Dice-Game"}),R.jsxs("div",{className:"text",children:[R.jsx("p",{children:"Objective The goal is to reach a certain score by rolling dice and selecting numbers."}),R.jsx("p",{children:"Setup Each player selects a number between 1 and 6. A dice is rolled to generate a random number between 1 and 6."}),R.jsx("p",{children:"Game Play Selecting a Number: Before each roll, the player must select a number between 1 and 6. The selected number is the player's guess for the upcoming roll."}),R.jsx("p",{children:"Rolling the Dice: The player rolls the dice to generate a random number between 1 and 6. The result of the roll is compared to the player's selected number."}),R.jsx("p",{children:"Scoring: If the rolled number matches the player's selected number, the player scores points equal to the rolled number. If the rolled number does not match the selected number, the player loses 2 points. The player's total score is updated accordingly."}),R.jsx("p",{children:"Winning: The game continues until a player reaches a predetermined score, which can be decided before the game starts (e.g., 50 points). The player who reaches the target score first is declared the winner."}),R.jsx("p",{children:"Resetting the Game:Players can reset the game at any time, which resets the score to zero and starts a new round."})]})]})}),Am=Te.div`
+`,Fm=({currentDice:e,roleDice:t})=>R.jsxs(jm,{children:[R.jsx(Dm,{src:`${Om.PUBLIC_URL}/images/RoleDice/Dice${e}.png`,alt:`Dice ${e}`}),R.jsx(Mm,{onClick:t,children:"Roll Dice"})]}),Am=()=>R.jsx("div",{children:R.jsxs(Um,{children:[R.jsx("h2",{children:"How to Play Dice-Game"}),R.jsxs("div",{className:"text",children:[R.jsx("p",{children:"Objective The goal is to reach a certain score by rolling dice and selecting numbers."}),R.jsx("p",{children:"Setup Each player selects a number between 1 and 6. A dice is rolled to generate a random number between 1 and 6."}),R.jsx("p",{children:"Game Play Selecting a Number: Before each roll, the player must select a number between 1 and 6. The selected number is the player's guess for the upcoming roll."}),R.jsx("p",{children:"Rolling the Dice: The player rolls the dice to generate a random number between 1 and 6. The result of the roll is compared to the player's selected number."}),R.jsx("p",{children:"Scoring: If the rolled number matches the player's selected number, the player scores points equal to the rolled number. If the rolled number does not match the selected number, the player loses 2 points. The player's total score is updated accordingly."}),R.jsx("p",{children:"Winning: The game continues until a player reaches a predetermined score, which can be decided before the game starts (e.g., 50 points). The player who reaches the target score first is declared the winner."}),R.jsx("p",{children:"Resetting the Game:Players can reset the game at any time, which resets the score to zero and starts a new round."})]})]})}),Um=Te.div`
 max-width: 1300px;
 margin: 0 auto;
 margin-top: 40px;
@@ -110,7 +110,7 @@ h2{
 text{
     margin-top: 24px;
 }
-`,Um=Te.div`
+`,Bm=Te.div`
   max-width: 200px;
   text-align: center;
   background-color: white;
@@ -122,13 +122,13 @@ text{
     font-size: 24px;
     font-weight: 500;
   }
-`,Bm=Te.div`
+`,Vm=Te.div`
   padding-top: 70px;
   display: flex;
   gap: 24px;
   align-items: center;
   justify-content: space-around;
-`,Vm=Te.div`
+`,Wm=Te.div`
   height: 72px;
   width: 72px;
   border: 1px solid black;
@@ -138,7 +138,7 @@ text{
   font-weight: 700;
   background-color: ${e=>e.isSelected?"black":"white"};
   color: ${e=>e.isSelected?"white":"black"};
-`,Wm=Te.div`
+`,Hm=Te.div`
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -155,7 +155,7 @@ text{
   .error {
     color: red;
   }
-`,Hm=Te.div`
+`,Qm=Te.div`
   display: flex;
   gap: 16px;
   margin-top: 20px;
@@ -176,4 +176,4 @@ text{
     border-color: #0a0247;
     transition: 0.3s background ease-in;
   }
-`,Qm=()=>{const[e,t]=Ve.useState(1),[n,r]=Ve.useState(),[l,o]=Ve.useState(0),[i,u]=Ve.useState(""),[s,c]=Ve.useState(!1),m=[1,2,3,4,5,6],h=y=>{r(y),u("")},p=(y,z)=>Math.floor(Math.random()*(z-y)+y),g=()=>{if(!n){u("You have not selected any number");return}const y=p(1,7);t(y),o(n===y?z=>z+y:z=>z-2),r(void 0)},w=()=>{t(1),r(void 0),o(0),u("")};return R.jsxs(R.Fragment,{children:[R.jsxs(Bm,{children:[R.jsxs(Um,{children:[R.jsx("h1",{children:l}),R.jsx("p",{children:"TOTAL SCORE"})]}),R.jsxs(Wm,{children:[R.jsx("p",{className:"error",children:i}),R.jsx("div",{className:"flex",children:m.map((y,z)=>R.jsx(Vm,{isSelected:y===n,onClick:()=>h(y),children:y},z))}),R.jsx("p",{children:"Select Number"})]})]}),R.jsx("div",{children:R.jsx(Mm,{currentDice:e,roleDice:g})}),R.jsxs(Hm,{children:[R.jsx(ya,{onClick:w,children:"Reset"}),R.jsx(ya,{onClick:()=>c(!s),children:"Rules"})]}),s&&R.jsx(Fm,{})]})};function Gm(){const[e,t]=Ve.useState(!1),n=()=>{t(r=>!r)};return R.jsx(R.Fragment,{children:e?R.jsx(Qm,{}):R.jsx(Im,{toggle:n})})}Xo.createRoot(document.getElementById("root")).render(R.jsx(Cn.StrictMode,{children:R.jsx(Gm,{})}));
+`,Gm=()=>{const[e,t]=Ve.useState(1),[n,r]=Ve.useState(),[l,o]=Ve.useState(0),[i,u]=Ve.useState(""),[s,c]=Ve.useState(!1),m=[1,2,3,4,5,6],h=y=>{r(y),u("")},p=(y,z)=>Math.floor(Math.random()*(z-y)+y),g=()=>{if(!n){u("You have not selected any number");return}const y=p(1,7);t(y),o(n===y?z=>z+y:z=>z-2),r(void 0)},w=()=>{t(1),r(void 0),o(0),u("")};return R.jsxs(R.Fragment,{children:[R.jsxs(Vm,{children:[R.jsxs(Bm,{children:[R.jsx("h1",{children:l}),R.jsx("p",{children:"TOTAL SCORE"})]}),R.jsxs(Hm,{children:[R.jsx("p",{className:"error",children:i}),R.jsx("div",{className:"flex",children:m.map((y,z)=>R.jsx(Wm,{isSelected:y===n,onClick:()=>h(y),children:y},z))}),R.jsx("p",{children:"Select Number"})]})]}),R.jsx("div",{children:R.jsx(Fm,{currentDice:e,roleDice:g})}),R.jsxs(Qm,{children:[R.jsx(ya,{onClick:w,children:"Reset"}),R.jsx(ya,{onClick:()=>c(!s),children:"Rules"})]}),s&&R.jsx(Am,{})]})};function Km(){const[e,t]=Ve.useState(!1),n=()=>{t(r=>!r)};return R.jsx(R.Fragment,{children:e?R.jsx(Gm,{}):R.jsx(Im,{toggle:n})})}Xo.createRoot(document.getElementById("root")).render(R.jsx(Cn.StrictMode,{children:R.jsx(Km,{})}));
