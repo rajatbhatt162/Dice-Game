@@ -34,7 +34,7 @@ const Button = styled.button`
 const RoleDice = ({ currentDice, roleDice }) => {
   return (
     <DiceContainer>
-      <DiceImage src={`/images/RoleDice/Dice${currentDice}.png`} alt={`Dice ${currentDice}`} />
+      <DiceImage src={`/public\images\RoleDice\Dice${currentDice}.png`} alt={`Dice ${currentDice}`} />
       <Button onClick={roleDice}>Roll Dice</Button>
     </DiceContainer>
   );
